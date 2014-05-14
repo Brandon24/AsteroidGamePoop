@@ -106,7 +106,7 @@ namespace Asteroid_Belt_Assault
                 spriteSheet,
                 new Rectangle(0, 200, 50, 50),
                 6,
-                playerManager,
+                playerManager,  
                 new Rectangle(
                     0,
                     0,
@@ -126,7 +126,7 @@ namespace Asteroid_Belt_Assault
                 explosionManager);
 
             SoundManager.Initialize(Content);
-
+             
             pericles14 = Content.Load<SpriteFont>(@"Fonts\Pericles14");
 
 
