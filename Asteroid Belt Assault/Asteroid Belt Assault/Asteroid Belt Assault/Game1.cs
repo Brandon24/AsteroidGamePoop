@@ -16,6 +16,7 @@ namespace Asteroid_Belt_Assault
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -43,6 +44,7 @@ namespace Asteroid_Belt_Assault
         private Vector2 playerStartLocation = new Vector2(390, 550);
         private Vector2 scoreLocation = new Vector2(20, 10);
         private Vector2 livesLocation = new Vector2(20, 25);
+        protected Song song;
 
 
         public Game1()
@@ -75,6 +77,11 @@ namespace Asteroid_Belt_Assault
 
             titleScreen = Content.Load<Texture2D>(@"Textures\TitleScreen");
             spriteSheet = Content.Load<Texture2D>(@"Textures\spriteSheet");
+
+            Song song = Content.Load<Song>(@"Sounds\10 minutes of Nyan Cat!");
+            MediaPlayer.Play(song);
+
+
 
             starField = new StarField(
                 this.Window.ClientBounds.Width,
@@ -312,6 +319,8 @@ namespace Asteroid_Belt_Assault
             spriteBatch.End();
 
             base.Draw(gameTime);
+
+          
         }
 
     }
